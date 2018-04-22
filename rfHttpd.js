@@ -3,7 +3,7 @@ var fs = require('fs');
 http.createServer(function(req, res){
     if(req.url != '/favicon.ico'){
         res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-        fs.readFile('./test/test.html', function(err, data){
+        fs.readFile('../www/index.html', function(err, data){
             if(err){
                 res.write(err.toString());
             }else{
