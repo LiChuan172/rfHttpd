@@ -12,7 +12,8 @@ http.createServer(function(req, res){
 //            }
 //            res.end();
 //        });
-        var pathname = url.parse(res.url).pathname;
+        var pathname = url.parse(req.url).pathname;
         res.write(pathname);
+        res.end();
     }
 }).listen(80);
