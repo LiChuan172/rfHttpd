@@ -13,7 +13,7 @@ http.createServer(function(req, res){
 //            res.end();
 //        });
         var pathname = url.parse(req.url).pathname;
-        res.write(pathname);
+        res.write("This path name is : '" + pathname + "'.");
         res.end();
     }
 }).listen(80);
